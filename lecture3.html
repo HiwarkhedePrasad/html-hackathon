@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 3: File Paths & HTML Boilerplate | Web Dev Journey</title>
+  </head>
+  <body>
+    <header>
+      <h1 align="center">🗂️ Lecture 3: File Paths & HTML Boilerplate</h1>
+      <p align="center">
+        <em
+          >Project Organization | Professional HTML Structure | DIV + Class +
+          ID</em
+        >
+      </p>
+      <hr />
+
+      <nav align="center">
+        <a href="index.html">🏠 Home</a> |
+        <a href="lecture2.html">◀️ Previous: Lists & Tables</a> |
+        <a href="lecture4.html">▶️ Next: HTML Forms</a> |
+        <a href="#file-paths">📁 File Paths</a> |
+        <a href="#boilerplate">📄 Boilerplate</a> |
+        <a href="#structure">🏗️ Structure</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <section>
+        <h2>🎯 Lecture Overview</h2>
+        <p>
+          This crucial lecture covered three fundamental concepts that separate
+          amateur web development from professional practices:
+          <strong>file path management</strong>,
+          <strong>HTML boilerplate code</strong>, and
+          <strong>semantic page structure</strong>
+          using div tags, classes, and IDs.
+        </p>
+
+        <h3>📚 Professional Skills We'll Master</h3>
+        <ol>
+          <li>
+            Understanding relative vs absolute file paths for resource linking
+          </li>
+          <li>Writing proper HTML5 boilerplate code for consistency</li>
+          <li>Using div containers for grouping and organization</li>
+          <li>Implementing CSS classes and IDs for styling and JavaScript</li>
+          <li>
+            Creating semantic page structure with header, main, and footer
+          </li>
+        </ol>
+      </section>
+
+      <section id="file-paths">
+        <h2>📁 File Paths: Navigating Your Project Structure</h2>
+        <p>
+          File paths tell the browser where to find resources like images, CSS
+          files, and other HTML pages. Understanding this concept is crucial for
+          building maintainable websites that work consistently across different
+          environments.
+        </p>
+
+        <h3>🗺️ Real-Life Path Analogy</h3>
+        <p>
+          Think of file paths like giving directions in the real world. If
+          you're in
+          <strong>Dwarka</strong> and want to go to
+          <strong>Chandni Chowk</strong>, you can either:
+        </p>
+        <ul>
+          <li>
+            <strong>Relative Path:</strong> "Go 2 blocks north, then turn left"
+            (relative to your current location)
+          </li>
+          <li>
+            <strong>Absolute Path:</strong> "Earth → Asia → India → Delhi →
+            Chandni Chowk" (complete address from the beginning)
+          </li>
+        </ul>
+
+        <h3>💻 Types of File Paths in Web Development</h3>
+
+        <h4>1. Relative Paths (Recommended for Web Projects)</h4>
+        <table border="1" align="center" width="90%">
+          <caption>
+            <strong>Relative Path Examples</strong>
+          </caption>
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>File Structure</th>
+              <th>Path Syntax</th>
+              <th>Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Same Folder</td>
+              <td>
+                📁 project/<br />
+                &nbsp;&nbsp;📄 index.html<br />
+                &nbsp;&nbsp;🖼️ logo.png
+              </td>
+              <td>
+                <strong>logo.png</strong><br />or<br /><strong
+                  >./logo.png</strong
+                >
+              </td>
+              <td>Direct filename or ./filename</td>
+            </tr>
+            <tr>
+              <td>Subfolder</td>
+              <td>
+                📁 project/<br />
+                &nbsp;&nbsp;📄 index.html<br />
+                &nbsp;&nbsp;📁 images/<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;🖼️ banner.jpg
+              </td>
+              <td><strong>images/banner.jpg</strong></td>
+              <td>Go into images folder</td>
+            </tr>
+            <tr>
+              <td>Parent Folder</td>
+              <td>
+                📁 project/<br />
+                &nbsp;&nbsp;🖼️ main-logo.png<br />
+                &nbsp;&nbsp;📁 pages/<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;📄 about.html
+              </td>
+              <td><strong>../main-logo.png</strong></td>
+              <td>Go up one level with ../</td>
+            </tr>
+            <tr>
+              <td>Complex Navigation</td>
+              <td>
+                📁 project/<br />
+                &nbsp;&nbsp;📁 assets/<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;📁 images/<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🖼️ hero.png<br />
+                &nbsp;&nbsp;📁 pages/<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;📄 contact.html
+              </td>
+              <td><strong>../assets/images/hero.png</strong></td>
+              <td>Up one level, then into folders</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>2. Absolute Paths (Limited Browser Support)</h4>
+        <p>
+          Absolute paths start from the root of your computer's file system.
+          However,
+          <strong>browsers block these for security reasons</strong> to prevent
+          websites from accessing your personal files!
+        </p>
+
+        <center>
+          <table border="1" width="70%">
+            <caption>
+              <strong>🚫 Why Absolute Paths Are Blocked</strong>
+            </caption>
+            <tr>
+              <th>Security Risk</th>
+              <th>Example</th>
+              <th>Why It's Dangerous</th>
+            </tr>
+            <tr>
+              <td>File System Exposure</td>
+              <td>/Users/John/Desktop/secret-files/</td>
+              <td>Could reveal personal folder structure</td>
+            </tr>
+            <tr>
+              <td>Unauthorized Access</td>
+              <td>/System/Library/sensitive-data/</td>
+              <td>Might access system files</td>
+            </tr>
+            <tr>
+              <td>Privacy Violation</td>
+              <td>/Documents/personal-photos/</td>
+              <td>Could expose private information</td>
+            </tr>
+          </table>
+        </center>
+
+        <h3>🎨 Practical File Path Example</h3>
+        <p>Here's how I organize my web project files:</p>
+        <pre>
+📁 my-website/
+├── 📄 index.html
+├── 📄 about.html
+├── 📄 contact.html
+├── 📁 assets/
+│   ├── 📁 images/
+│   │   ├── 🖼️ logo.png
+│   │   ├── 🖼️ hero-banner.jpg
+│   │   └── 🖼️ team-photo.jpg
+│   ├── 📁 css/
+│   │   └── 📄 styles.css
+│   └── 📁 js/
+│       └── 📄 script.js
+├── 📁 pages/
+│   ├── 📄 services.html
+│   └── 📄 portfolio.html
+└── 📁 docs/
+    └── 📄 readme.txt
+            </pre
+        >
+      </section>
+
+      <section id="boilerplate">
+        <h2>📄 HTML5 Boilerplate: The Professional Foundation</h2>
+        <p>
+          While browsers are forgiving and will render incomplete HTML,
+          professional developers always use proper boilerplate code. This
+          ensures consistency across different browsers, improves SEO, and
+          provides a solid foundation for advanced features.
+        </p>
+
+        <h3>🏗️ The Complete HTML5 Boilerplate Explained</h3>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="Page description for SEO"&gt;
+    &lt;title&gt;Page Title - Appears in Browser Tab&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Your amazing content goes here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <h3>🔍 Breaking Down Each Component</h3>
+        <table border="1" align="center" width="95%">
+          <caption>
+            <strong>HTML5 Boilerplate Components Explained</strong>
+          </caption>
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Purpose</th>
+              <th>Why It's Important</th>
+              <th>Real-World Impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>&lt;!DOCTYPE html&gt;</strong></td>
+              <td>Declares HTML5 document type</td>
+              <td>Tells browser to use modern HTML5 standards</td>
+              <td>Prevents "quirks mode" rendering issues</td>
+            </tr>
+            <tr>
+              <td><strong>lang="en"</strong></td>
+              <td>Specifies document language</td>
+              <td>Helps screen readers and search engines</td>
+              <td>Better accessibility and SEO ranking</td>
+            </tr>
+            <tr>
+              <td><strong>charset="UTF-8"</strong></td>
+              <td>Character encoding standard</td>
+              <td>Supports all languages and emojis 🌍</td>
+              <td>No broken characters or symbols</td>
+            </tr>
+            <tr>
+              <td><strong>viewport meta</strong></td>
+              <td>Controls mobile display behavior</td>
+              <td>Essential for responsive design</td>
+              <td>Proper mobile phone rendering</td>
+            </tr>
+            <tr>
+              <td><strong>description meta</strong></td>
+              <td>Page summary for search engines</td>
+              <td>Appears in Google search results</td>
+              <td>Higher click-through rates</td>
+            </tr>
+            <tr>
+              <td><strong>&lt;title&gt;</strong></td>
+              <td>Page title in browser tab</td>
+              <td>First thing users see in search results</td>
+              <td>Better user experience and bookmarking</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>🌐 UTF-8 vs ASCII: Why UTF-8 Wins</h3>
+        <center>
+          <table border="1" width="70%">
+            <tr>
+              <th>Encoding Type</th>
+              <th>Character Support</th>
+              <th>Examples</th>
+            </tr>
+            <tr>
+              <td><strong>ASCII</strong></td>
+              <td>Only basic English characters</td>
+              <td>A-Z, a-z, 0-9, basic symbols</td>
+            </tr>
+            <tr>
+              <td><strong>UTF-8</strong></td>
+              <td>All world languages + emojis</td>
+              <td>हिंदी, العربية, 中文, 日本語, 🚀, 💻, 🎉</td>
+            </tr>
+          </table>
+        </center>
+
+        <p align="center">
+          <em>UTF-8 makes your website globally accessible! 🌍</em>
+        </p>
+      </section>
+
+      <section id="structure">
+        <h2>🏗️ HTML Structure: DIV, Classes, and IDs</h2>
+        <p>
+          This section taught us how to organize content using container
+          elements and prepare our HTML for styling with CSS and interaction
+          with JavaScript.
+        </p>
+
+        <h3>📦 DIV Tags: The Ultimate Containers</h3>
+        <p>
+          The <strong>&lt;div&gt;</strong> tag is like a invisible box that
+          groups multiple elements together. Instead of styling each element
+          individually, you can style the entire container at once!
+        </p>
+
+        <h4>Example: Before and After DIV Usage</h4>
+        <table border="1" align="center" width="90%">
+          <tr>
+            <th width="50%">❌ Without DIV (Inefficient)</th>
+            <th width="50%">✅ With DIV (Efficient)</th>
+          </tr>
+          <tr>
+            <td>
+              <pre>
+&lt;h2 align="center"&gt;Welcome&lt;/h2&gt;
+&lt;p align="center"&gt;Description&lt;/p&gt;
+&lt;img align="center" src="..."&gt;
+&lt;button align="center"&gt;Click&lt;/button&gt;</pre
+              >
+            </td>
+            <td>
+              <pre>
+&lt;div align="center"&gt;
+    &lt;h2&gt;Welcome&lt;/h2&gt;
+    &lt;p&gt;Description&lt;/p&gt;
+    &lt;img src="..."&gt;
+    &lt;button&gt;Click&lt;/button&gt;
+&lt;/div&gt;</pre
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>4 separate align attributes needed</td>
+            <td>Only 1 align attribute centers everything!</td>
+          </tr>
+        </table>
+
+        <h3>🎨 Classes vs IDs: Understanding the Difference</h3>
+        <table border="1" align="center" width="95%">
+          <caption>
+            <strong>Classes vs IDs Comparison</strong>
+          </caption>
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Classes</th>
+              <th>IDs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Syntax</strong></td>
+              <td>class="my-class"</td>
+              <td>id="my-id"</td>
+            </tr>
+            <tr>
+              <td><strong>Usage</strong></td>
+              <td>Can be used multiple times</td>
+              <td>Should be unique per page</td>
+            </tr>
+            <tr>
+              <td><strong>Purpose</strong></td>
+              <td>Grouping similar elements</td>
+              <td>Identifying specific elements</td>
+            </tr>
+            <tr>
+              <td><strong>CSS Selector</strong></td>
+              <td>.my-class</td>
+              <td>#my-id</td>
+            </tr>
+            <tr>
+              <td><strong>JavaScript Selection</strong></td>
+              <td>getElementsByClassName()</td>
+              <td>getElementById()</td>
+            </tr>
+            <tr>
+              <td><strong>Best For</strong></td>
+              <td>Styling multiple elements</td>
+              <td>Unique functionality</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>🌟 Practical Example: Blog Post Structure</h3>
+        <div align="center">
+          <h4>Example Blog Post HTML Structure</h4>
+          <table border="1" width="80%">
+            <tr>
+              <td>
+                <pre>
+&lt;div class="blog-post"&gt;
+    &lt;h2 id="post-title"&gt;My Amazing Journey&lt;/h2&gt;
+    &lt;p class="post-meta"&gt;Published on Jan 15, 2024&lt;/p&gt;
+    &lt;div class="post-content"&gt;
+        &lt;p class="paragraph"&gt;First paragraph...&lt;/p&gt;
+        &lt;p class="paragraph"&gt;Second paragraph...&lt;/p&gt;
+        &lt;img class="post-image" src="journey.jpg" alt="My journey"&gt;
+    &lt;/div&gt;
+    &lt;div class="post-actions"&gt;
+        &lt;button id="like-button" class="action-btn"&gt;Like&lt;/button&gt;
+        &lt;button id="share-button" class="action-btn"&gt;Share&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre
+                >
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <h4>🎯 Why This Structure Works</h4>
+        <ul>
+          <li>
+            <strong>class="blog-post":</strong> Styles all blog posts
+            consistently
+          </li>
+          <li>
+            <strong>id="post-title":</strong> JavaScript can access this
+            specific title
+          </li>
+          <li>
+            <strong>class="paragraph":</strong> All paragraphs get same
+            formatting
+          </li>
+          <li>
+            <strong>class="action-btn":</strong> Both buttons share the same
+            styling
+          </li>
+          <li>
+            <strong>id="like-button":</strong> JavaScript can add click
+            functionality to like button specifically
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🏛️ Semantic HTML Structure</h2>
+        <p>
+          Professional websites follow a three-part structure that improves both
+          user experience and search engine optimization:
+        </p>
+
+        <h3>📐 The Three-Part Website Architecture</h3>
+        <center>
+          <table border="2" width="70%">
+            <caption>
+              <strong>Website Structure Components</strong>
+            </caption>
+            <tr>
+              <th>Section</th>
+              <th>HTML Tag</th>
+              <th>Typical Content</th>
+              <th>Purpose</th>
+            </tr>
+            <tr>
+              <td><strong>Header</strong></td>
+              <td>&lt;header&gt;</td>
+              <td>Logo, Navigation Menu, Contact Info</td>
+              <td>Site identity and navigation</td>
+            </tr>
+            <tr>
+              <td><strong>Main Content</strong></td>
+              <td>&lt;main&gt;</td>
+              <td>Primary page content, articles, forms</td>
+              <td>Core information delivery</td>
+            </tr>
+            <tr>
+              <td><strong>Footer</strong></td>
+              <td>&lt;footer&gt;</td>
+              <td>Copyright, Social links, Additional info</td>
+              <td>Supporting information</td>
+            </tr>
+          </table>
+        </center>
+
+        <h3>🏗️ Complete Page Structure Example</h3>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Professional Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header class="site-header"&gt;
+        &lt;div class="header-container"&gt;
+            &lt;img id="site-logo" src="logo.png" alt="Company Logo"&gt;
+            &lt;nav class="main-navigation"&gt;
+                &lt;ul class="nav-list"&gt;
+                    &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main class="main-content"&gt;
+        &lt;section id="hero" class="hero-section"&gt;
+            &lt;h1 class="main-title"&gt;Welcome to My Website&lt;/h1&gt;
+            &lt;p class="hero-description"&gt;Building amazing web experiences&lt;/p&gt;
+        &lt;/section&gt;
+        
+        &lt;section id="about" class="content-section"&gt;
+            &lt;h2 class="section-title"&gt;About Me&lt;/h2&gt;
+            &lt;p class="section-text"&gt;I'm a passionate web developer...&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer class="site-footer"&gt;
+        &lt;div class="footer-container"&gt;
+            &lt;p class="copyright"&gt;&copy; 2024 My Website. All rights reserved.&lt;/p&gt;
+            &lt;div class="social-links"&gt;
+                &lt;a href="#" class="social-link"&gt;Facebook&lt;/a&gt;
+                &lt;a href="#" class="social-link"&gt;Twitter&lt;/a&gt;
+                &lt;a href="#" class="social-link"&gt;LinkedIn&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </section>
+
+      <section>
+        <h2>💡 My Key Learning Insights</h2>
+
+        <h3>🎯 Professional Development Takeaways</h3>
+        <ol>
+          <li>
+            <strong>File Organization is Crucial:</strong> A well-structured
+            project folder saves hours of debugging later
+          </li>
+          <li>
+            <strong>Relative Paths = Portability:</strong> Your project works
+            anywhere without breaking links
+          </li>
+          <li>
+            <strong>Boilerplate Shows Professionalism:</strong> It's the
+            difference between amateur and professional code
+          </li>
+          <li>
+            <strong>Classes for Groups, IDs for Individuals:</strong> This
+            principle guides all CSS and JavaScript work
+          </li>
+          <li>
+            <strong>Semantic Structure Helps Everyone:</strong> Users, search
+            engines, and other developers benefit
+          </li>
+        </ol>
+
+        <h3>🚀 Real-World Applications I Discovered</h3>
+        <ul>
+          <li>
+            <strong>E-commerce Projects:</strong> Product images organized in
+            assets/images/products/
+          </li>
+          <li>
+            <strong>Portfolio Websites:</strong> Classes for project cards,
+            unique IDs for each project
+          </li>
+          <li>
+            <strong>Blog Platforms:</strong> Semantic structure helps with SEO
+            and accessibility
+          </li>
+          <li>
+            <strong>Corporate Sites:</strong> Professional boilerplate ensures
+            cross-browser compatibility
+          </li>
+          <li>
+            <strong>Mobile Apps:</strong> Viewport meta tag is essential for
+            responsive design
+          </li>
+        </ul>
+
+        <blockquote>
+          <p>
+            <em>
+              "This lecture was a game-changer! It transformed my understanding
+              from 'making HTML work' to 'building professional web
+              applications.' The concepts of file organization and semantic
+              structure are foundational skills that every developer needs."
+            </em>
+          </p>
+          <p align="right">- My personal reflection</p>
+        </blockquote>
+      </section>
+
+      <section>
+        <h2>🛠️ Practical Tips from Experience</h2>
+
+        <h3>📁 File Organization Best Practices</h3>
+        <ul>
+          <li>
+            <strong>Use Descriptive Folder Names:</strong> "assets/images" not
+            "stuff/pics"
+          </li>
+          <li>
+            <strong>Keep Paths Short:</strong> Avoid deeply nested folder
+            structures
+          </li>
+          <li>
+            <strong>Consistent Naming:</strong> Use lowercase and hyphens
+            (my-image.jpg)
+          </li>
+          <li>
+            <strong>Group by Type:</strong> All images together, all CSS
+            together
+          </li>
+          <li>
+            <strong>Plan for Growth:</strong> Start with good structure even for
+            small projects
+          </li>
+        </ul>
+
+        <h3>🎨 CSS Class and ID Naming Conventions</h3>
+        <center>
+          <table border="1" width="80%">
+            <tr>
+              <th>Element Type</th>
+              <th>Good Class/ID Names</th>
+              <th>Bad Examples</th>
+            </tr>
+            <tr>
+              <td>Navigation</td>
+              <td>main-nav, primary-menu, nav-list</td>
+              <td>menu1, navigation</td>
+            </tr>
+            <tr>
+              <td>Buttons</td>
+              <td>btn-primary, action-button, submit-btn</td>
+              <td>button, click-me</td>
+            </tr>
+            <tr>
+              <td>Content Areas</td>
+              <td>content-section, article-body, sidebar</td>
+              <td>content, div1, area</td>
+            </tr>
+            <tr>
+              <td>Forms</td>
+              <td>contact-form, input-field, form-group</td>
+              <td>form, input</td>
+            </tr>
+          </table>
+        </center>
+      </section>
+
+      <section>
+        <h2>🎬 Watch the Original Lecture</h2>
+        <p align="center">Here's the comprehensive tutorial video:</p>
+        <center>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/k78lNSAB8VY"
+            title="File Paths & HTML Boilerplate Tutorial"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </center>
+      </section>
+
+      <section>
+        <h2>🏃‍♂️ Practice Challenge</h2>
+        <p>
+          <strong>Project Assignment:</strong> Create a personal portfolio
+          website with:
+        </p>
+        <ol>
+          <li>
+            Proper folder structure with separate directories for images, CSS,
+            and JS
+          </li>
+          <li>Complete HTML5 boilerplate for all pages</li>
+          <li>Semantic header, main, and footer sections</li>
+          <li>Use classes for reusable styles and IDs for unique elements</li>
+          <li>Include relative links between pages and to local images</li>
+        </ol>
+
+        <p>
+          <strong>Bonus Challenge:</strong> Create a multi-language website
+          structure where you can easily switch between English and Hindi
+          versions using proper file organization and UTF-8 encoding.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <nav align="center">
+        <a href="index.html">🏠 Back to Home</a> |
+        <a href="lecture2.html">◀️ Previous: Lists & Tables</a> |
+        <a href="lecture4.html">▶️ Next: HTML Forms</a> |
+        <a href="#top">⬆️ Back to Top</a>
+      </nav>
+      <hr />
+      <p align="center">
+        <small>
+          <strong>Lecture 3 Complete!</strong> ✅<br />
+          Professional HTML structure mastered! Ready to learn about user
+          interaction?<br />
+          <em>Build with structure, code with purpose! 🏗️</em>
+        </small>
+      </p>
+    </footer>
+  </body>
+</html>

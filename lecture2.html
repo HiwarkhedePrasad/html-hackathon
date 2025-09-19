@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 2: Nested Lists & Tables | Web Dev Journey</title>
+  </head>
+  <body>
+    <header>
+      <h1 align="center">📊 Lecture 2: HTML Nested Lists & Tables</h1>
+      <p align="center">
+        <em>The Complete Guide to Organizing Data and Content</em>
+      </p>
+      <hr />
+
+      <nav align="center">
+        <a href="index.html">🏠 Home</a> |
+        <a href="lecture1.html">◀️ Previous: HTML Basics</a> |
+        <a href="lecture3.html">▶️ Next: File Paths & Boilerplate</a> |
+        <a href="#nested-lists">📋 Nested Lists</a> |
+        <a href="#tables">📊 Tables</a>
+      </nav>
+      <hr />
+    </header>
+
+    <main>
+      <section>
+        <h2>🎯 Lecture Overview</h2>
+        <p>
+          This lecture taught us two powerful HTML concepts for organizing
+          information:
+          <strong>nested lists</strong> (lists within lists) and
+          <strong>HTML tables</strong>
+          for displaying structured data in rows and columns. These tools are
+          essential for creating well-organized, readable web content.
+        </p>
+
+        <h3>📚 What We'll Master Today</h3>
+        <ol>
+          <li>
+            Understanding nested list structures and their practical
+            applications
+          </li>
+          <li>
+            Creating complex hierarchical information using multiple list levels
+          </li>
+          <li>
+            Building professional tables with headers, bodies, and footers
+          </li>
+          <li>Using colspan and rowspan for advanced table layouts</li>
+          <li>Best practices for semantic table structure</li>
+        </ol>
+      </section>
+
+      <section id="nested-lists">
+        <h2>📋 Nested Lists: Lists Within Lists</h2>
+        <p>
+          A <strong>nested list</strong> is simply a list placed inside another
+          list item. This creates hierarchical structures perfect for organizing
+          complex information like course outlines, geographical data, or menu
+          systems.
+        </p>
+
+        <h3>🌍 Example: Countries and Their Cities</h3>
+        <p>Let's see how nested lists work with a practical example:</p>
+        <ul>
+          <li>
+            <strong>India</strong>
+            <ul>
+              <li>Mumbai</li>
+              <li>Delhi</li>
+              <li>Bangalore</li>
+              <li>Chennai</li>
+            </ul>
+          </li>
+          <li>
+            <strong>USA</strong>
+            <ul>
+              <li>New York</li>
+              <li>Los Angeles</li>
+              <li>Chicago</li>
+              <li>Houston</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Japan</strong>
+            <ul>
+              <li>Tokyo</li>
+              <li>Osaka</li>
+              <li>Kyoto</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>🍽️ My Daily Meal Plan (Mixed List Types)</h3>
+        <p>Here's a creative example mixing ordered and unordered lists:</p>
+        <ol>
+          <li>
+            <strong>Breakfast</strong> (7:00 AM - 8:00 AM)
+            <ul>
+              <li>Oats with fruits</li>
+              <li>Green tea</li>
+              <li>Almonds (5-6 pieces)</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Mid-Morning Snack</strong> (10:00 AM)
+            <ul>
+              <li>Fresh fruit juice</li>
+              <li>Whole wheat biscuits</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Lunch</strong> (12:30 PM - 1:30 PM)
+            <ul>
+              <li>Rice or roti</li>
+              <li>Dal (lentils)</li>
+              <li>Mixed vegetables</li>
+              <li>Salad</li>
+              <li>Yogurt</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Evening Snack</strong> (4:00 PM)
+            <ul>
+              <li>Tea with light snacks</li>
+              <li>Nuts or fruits</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Dinner</strong> (7:30 PM - 8:30 PM)
+            <ul>
+              <li>Light meal with vegetables</li>
+              <li>Soup or salad</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h3>🎓 Programming Course Structure</h3>
+        <p>Perfect for educational content organization:</p>
+        <ol>
+          <li>
+            <strong>Web Development Fundamentals</strong>
+            <ol>
+              <li>
+                HTML Basics
+                <ul>
+                  <li>Tags and Elements</li>
+                  <li>Semantic HTML</li>
+                  <li>Forms and Input</li>
+                </ul>
+              </li>
+              <li>
+                CSS Styling
+                <ul>
+                  <li>Selectors</li>
+                  <li>Box Model</li>
+                  <li>Flexbox & Grid</li>
+                </ul>
+              </li>
+              <li>
+                JavaScript Programming
+                <ul>
+                  <li>Variables and Functions</li>
+                  <li>DOM Manipulation</li>
+                  <li>Event Handling</li>
+                </ul>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <strong>Advanced Topics</strong>
+            <ol>
+              <li>Backend Development</li>
+              <li>Database Management</li>
+              <li>Deployment Strategies</li>
+            </ol>
+          </li>
+        </ol>
+      </section>
+
+      <section id="tables">
+        <h2>📊 HTML Tables: Structuring Data Professionally</h2>
+        <p>
+          HTML tables are perfect for displaying structured data in rows and
+          columns. They're ideal for schedules, comparison charts, statistical
+          data, and any information that benefits from tabular presentation.
+        </p>
+
+        <h3>🏗️ Table Structure Components</h3>
+        <ul>
+          <li><strong>&lt;table&gt;</strong> - The main container</li>
+          <li><strong>&lt;thead&gt;</strong> - Table header section</li>
+          <li><strong>&lt;tbody&gt;</strong> - Table body content</li>
+          <li><strong>&lt;tfoot&gt;</strong> - Table footer section</li>
+          <li><strong>&lt;tr&gt;</strong> - Table row</li>
+          <li><strong>&lt;th&gt;</strong> - Table header cell</li>
+          <li><strong>&lt;td&gt;</strong> - Table data cell</li>
+        </ul>
+
+        <h3>📅 Example: Weekly Class Schedule</h3>
+        <table border="2" align="center" width="90%">
+          <caption>
+            <strong>🎓 My Weekly Class Timetable - Semester 1</strong>
+          </caption>
+          <thead>
+            <tr>
+              <th>Time Slot</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>9:00 AM - 10:00 AM</strong></td>
+              <td>Mathematics</td>
+              <td>Physics</td>
+              <td>Chemistry</td>
+              <td>Mathematics</td>
+              <td>English</td>
+            </tr>
+            <tr>
+              <td><strong>10:00 AM - 11:00 AM</strong></td>
+              <td>Computer Science</td>
+              <td rowspan="2">Physics Lab</td>
+              <td>Biology</td>
+              <td>Computer Science</td>
+              <td>History</td>
+            </tr>
+            <tr>
+              <td><strong>11:00 AM - 12:00 PM</strong></td>
+              <td>English Literature</td>
+              <td>Mathematics</td>
+              <td>Chemistry Lab</td>
+              <td>Geography</td>
+            </tr>
+            <tr>
+              <td><strong>12:00 PM - 1:00 PM</strong></td>
+              <td colspan="5" align="center">
+                <strong>🍽️ LUNCH BREAK</strong>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>1:00 PM - 2:00 PM</strong></td>
+              <td>Physical Education</td>
+              <td>Computer Lab</td>
+              <td>Library Study</td>
+              <td>Art & Craft</td>
+              <td>Music</td>
+            </tr>
+            <tr>
+              <td><strong>2:00 PM - 3:00 PM</strong></td>
+              <td>Study Hall</td>
+              <td>Extra Curricular</td>
+              <td>Project Work</td>
+              <td>Sports</td>
+              <td>Free Period</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="6" align="center">
+                <em>📚 Remember: Bring all necessary books and materials</em>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <h3>🏆 Advanced Table: Student Performance Analysis</h3>
+        <table border="1" align="center" width="80%">
+          <caption>
+            <strong>📈 Semester Performance Report</strong>
+          </caption>
+          <thead>
+            <tr>
+              <th rowspan="2">Student Name</th>
+              <th colspan="3">Mid-term Scores</th>
+              <th colspan="3">Final Scores</th>
+              <th rowspan="2">Overall Grade</th>
+            </tr>
+            <tr>
+              <th>Math</th>
+              <th>Science</th>
+              <th>English</th>
+              <th>Math</th>
+              <th>Science</th>
+              <th>English</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Arjun Sharma</strong></td>
+              <td>85</td>
+              <td>78</td>
+              <td>92</td>
+              <td>88</td>
+              <td>84</td>
+              <td>95</td>
+              <td><strong>A</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Priya Patel</strong></td>
+              <td>92</td>
+              <td>89</td>
+              <td>87</td>
+              <td>94</td>
+              <td>91</td>
+              <td>89</td>
+              <td><strong>A+</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Rahul Singh</strong></td>
+              <td>76</td>
+              <td>82</td>
+              <td>79</td>
+              <td>81</td>
+              <td>85</td>
+              <td>83</td>
+              <td><strong>B+</strong></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td><strong>Class Average</strong></td>
+              <td><strong>84.3</strong></td>
+              <td><strong>83.0</strong></td>
+              <td><strong>86.0</strong></td>
+              <td><strong>87.7</strong></td>
+              <td><strong>86.7</strong></td>
+              <td><strong>89.0</strong></td>
+              <td><strong>A-</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section>
+        <h2>🔧 Key Attributes Explained</h2>
+
+        <h3>📏 Colspan and Rowspan</h3>
+        <table border="1" align="center" width="60%">
+          <caption>
+            <strong>Understanding Span Attributes</strong>
+          </caption>
+          <tr>
+            <th>Attribute</th>
+            <th>Purpose</th>
+            <th>Example Usage</th>
+          </tr>
+          <tr>
+            <td><strong>colspan</strong></td>
+            <td>Makes a cell span across multiple columns</td>
+            <td>colspan="3" spans 3 columns</td>
+          </tr>
+          <tr>
+            <td><strong>rowspan</strong></td>
+            <td>Makes a cell span across multiple rows</td>
+            <td>rowspan="2" spans 2 rows</td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Combined Usage</strong></td>
+            <td>Can use both attributes together</td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>💡 My Personal Learning Insights</h2>
+
+        <h3>🎯 Key Takeaways from This Lecture</h3>
+        <ol>
+          <li>
+            <strong>Nested Lists for Hierarchy:</strong> Perfect for organizing
+            complex information with clear parent-child relationships
+          </li>
+          <li>
+            <strong>Semantic Table Structure:</strong> Always use thead, tbody,
+            and tfoot for professional, accessible tables
+          </li>
+          <li>
+            <strong>Colspan and Rowspan Strategy:</strong> Plan your table
+            layout on paper before coding to avoid confusion
+          </li>
+          <li>
+            <strong>Meaningful Data Organization:</strong> Both lists and tables
+            should make information easier to understand, not more complex
+          </li>
+          <li>
+            <strong>Accessibility Matters:</strong> Proper table headers and
+            list structure help screen readers
+          </li>
+        </ol>
+
+        <h3>🚀 Real-World Applications I Discovered</h3>
+        <ul>
+          <li>
+            <strong>E-commerce Sites:</strong> Product categories and
+            subcategories using nested lists
+          </li>
+          <li>
+            <strong>Educational Platforms:</strong> Course structures and lesson
+            hierarchies
+          </li>
+          <li>
+            <strong>Data Dashboards:</strong> Statistical tables with
+            performance metrics
+          </li>
+          <li>
+            <strong>Restaurant Menus:</strong> Food categories with item details
+            in nested lists
+          </li>
+          <li>
+            <strong>Pricing Pages:</strong> Feature comparison tables with
+            spanning cells
+          </li>
+        </ul>
+
+        <blockquote>
+          <p>
+            <em>
+              "The beauty of HTML tables and nested lists lies in their ability
+              to transform chaotic information into organized, readable content.
+              It's like being a digital librarian - everything has its perfect
+              place!"
+            </em>
+          </p>
+          <p align="right">- My reflection on this lecture</p>
+        </blockquote>
+      </section>
+
+      <section>
+        <h2>🎬 Watch the Original Lecture</h2>
+        <p align="center">
+          Here's the embedded YouTube video for this comprehensive tutorial:
+        </p>
+        <center>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/AJ4E1zf5tQs"
+            title="HTML Nested Lists & Tables Tutorial"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </center>
+      </section>
+
+      <section>
+        <h2>🏃‍♂️ Practice Challenge</h2>
+        <p>
+          <strong>Homework Assignment:</strong> Create a nested list of your
+          favorite movies organized by genre, and build a table showing your
+          weekly study schedule with proper use of colspan and rowspan.
+        </p>
+
+        <p>
+          <strong>Bonus Challenge:</strong> Design a restaurant menu using
+          nested lists for different meal categories, and create a nutritional
+          information table for the dishes.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <nav align="center">
+        <a href="index.html">🏠 Back to Home</a> |
+        <a href="lecture1.html">◀️ Previous: HTML Basics</a> |
+        <a href="lecture3.html">▶️ Next: File Paths & Boilerplate</a> |
+        <a href="#top">⬆️ Back to Top</a>
+      </nav>
+      <hr />
+      <p align="center">
+        <small>
+          <strong>Lecture 2 Complete!</strong> ✅<br />
+          Data organization mastered! Ready for file management concepts?<br />
+          <em>Keep structuring, keep learning! 📊</em>
+        </small>
+      </p>
+    </footer>
+  </body>
+</html>
